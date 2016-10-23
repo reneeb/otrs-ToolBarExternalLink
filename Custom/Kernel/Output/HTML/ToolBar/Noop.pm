@@ -24,8 +24,17 @@ sub new {
 sub Run {
     my ( $Self, %Param ) = @_;
 
+    my $LayoutObject = $Kernel::OM->Get('Kernel::Output::HTML::Layout');
+
     my $Priority = $Param{Config}->{'Priority'};
     my %Return   = ();
+
+    my @Groups = split /\s*,\s*/, $Param{Config}->{Groups} // '';
+
+    if ( @Groups ) {
+        my $Found = grep{ my $Test = $LayoutObject->{"UserIsGroup[$_]"}; $Test && lc $Test eq 'yes' }@Groups;
+        return if !$Found;
+    }
 
     $Return{ $Priority++ } = {
         Block       => $Param{Config}->{Block},
