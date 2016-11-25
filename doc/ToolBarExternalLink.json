@@ -1,6 +1,6 @@
 {
     "name": "ToolBarExternalLink",
-    "version": "5.0.3",
+    "version": "5.0.4",
     "framework": [
         "5.0.x"
     ],
@@ -10,7 +10,8 @@
     },
     "license": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007",
     "description" : {
-        "en": "add an external link to the toolbar",
-        "de": "Fügt einen externen Link zur Toolbar hinzu"
+        "en": "Add an external link to the toolbar.",
+        "de": "Fügt einen externen Link zur Toolbar hinzu.",
+        "hu": "Külső hivatkozás hozzáadása az eszköztárhoz."
     }
 }
