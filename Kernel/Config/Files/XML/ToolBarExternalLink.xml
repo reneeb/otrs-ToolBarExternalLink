@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<otrs_config version="1.0" init="Config">
-    <ConfigItem Name="Frontend::ToolBarModule###4-ExternalURL" Required="0" Valid="0">
+<otrs_config version="2.0" init="Config">
+    <Setting Name="Frontend::ToolBarModule###4-ExternalURL" Required="0" Valid="0">
         <Description Translatable="1">Toolbar item for an external link.</Description>
-        <Group>Ticket</Group>
-        <SubGroup>Frontend::Agent::ToolBarModule</SubGroup>
-        <Setting>
+        <Navigation>Frontend::Agent::ToolBar</Navigation>
+        <Value>
             <Hash>
                 <Item Key="Module">Kernel::Output::HTML::ToolBar::Noop</Item>
                 <Item Key="Name" Translatable="1">Link to Feature-Addons.de</Item>
@@ -15,6 +14,6 @@
                 <Item Key="Icon">fa fa-external-link</Item>
                 <Item Key="Priority">1020012</Item>
             </Hash>
-        </Setting>
-    </ConfigItem>
+        </Value>
+    </Setting>
 </otrs_config>
